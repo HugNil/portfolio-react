@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm install && cd frontend && npm install",
+    "start": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugNil/portfolio-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugNil/portfolio-react/issues"
+  },
+  "homepage": "https://github.com/HugNil/portfolio-react#readme",
+  "description": ""
+}
