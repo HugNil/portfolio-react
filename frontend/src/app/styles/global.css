@@ -1,0 +1,102 @@
+/* src/app/styles/global.css */
+@import './reset.css';
+@import './variables.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+p, span, li {
+  font-family: var(--font-sans);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.button {
+  display: inline-block;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button-primary {
+  background-color: var(--color-accent-dark);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+}
+.button-primary:hover {
+  background-color: #111827;
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-accent-dark);
+  color: var(--color-accent-dark);
+  padding: 0.5rem 1.25rem;
+}
+.button-secondary:hover {
+  background-color: var(--color-accent-dark);
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media screen and (min-width: 640px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+  flex-grow: 1;
+}

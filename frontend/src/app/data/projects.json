@@ -1,0 +1,20 @@
+[
+  {
+    "id": "weather-app",
+    "title": "Väderapp",
+    "description": "En enkel väderapplikation byggd med React och OpenWeather API.",
+    "technologies": ["React", "CSS", "OpenWeather API"],
+    "image": "/assets/weather-app.png",
+    "liveUrl": "https://exempel.com/weather-app",
+    "repoUrl": "https://github.com/ditt-anvandarnamn/weather-app"
+  },
+  {
+    "id": "portfolio-site",
+    "title": "Min Portfolio",
+    "description": "Denna portfolio-sida byggd med Next.js och vanlig CSS.",
+    "technologies": ["Next.js", "React", "CSS"],
+    "image": "/assets/portfolio-site.png",
+    "liveUrl": "https://dittdomän.se",
+    "repoUrl": "https://github.com/ditt-anvandarnamn/portfolio"
+  }
+]

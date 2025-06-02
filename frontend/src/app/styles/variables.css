@@ -1,0 +1,10 @@
+/* src/app/styles/variables.css */
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --color-bg-primary: #F3F4F6;
+  --color-bg-secondary: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4B5563;
+  --color-accent-blue: #2563EB;
+  --color-accent-dark: #1F2937;
+}
