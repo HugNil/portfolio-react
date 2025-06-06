@@ -2,27 +2,33 @@ import styles from '../styles/components/MenuModal.module.css';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-export default function MenuModal({ isOpen, onClose }) {
-  // Close menu when pressing Escape key
+export default function MenuModal({ isOpen, onClose }) {  // Close menu when pressing Escape key or clicking outside
   useEffect(() => {
     const handleEscKey = (e) => {
       if (isOpen && e.key === 'Escape') {
         onClose();
       }
     };
+    
+    const handleClickOutside = (e) => {
+      // Check if the click is outside the menu
+      const menuElement = document.querySelector(`.${styles.overlay}`);
+      const hamburgerElement = document.querySelector('[class*="hamburger"]');
+      
+      if (isOpen && menuElement && !menuElement.contains(e.target) && 
+          hamburgerElement && !hamburgerElement.contains(e.target)) {
+        onClose();
+      }
+    };
 
     window.addEventListener('keydown', handleEscKey);
+    window.addEventListener('mousedown', handleClickOutside);
     
-    // If menu is open, prevent background scrolling
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    // Note: We no longer prevent scrolling when the menu is open
     
     return () => {
       window.removeEventListener('keydown', handleEscKey);
-      document.body.style.overflow = 'auto';
+      window.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isOpen, onClose]);
 
