@@ -1,31 +1,30 @@
-// src/app/components/Navbar.jsx
 'use client';
 
-import Link from 'next/link';
+import { useState } from 'react';
 import styles from '../styles/components/Navbar.module.css';
+import hamburgerstyles from '../styles/components/Hamburger.module.css';
+import MenuModal from './MenuModal';
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.inner}>
-        <Link href="/">
-          <a className={styles.logo}>
-            Min Portfolio
-          </a>
-        </Link>
-        <ul className={styles.menu}>
-          <li>
-            <Link href="/">
-              <a className={styles.menuItem}>Hem</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects">
-              <a className={styles.menuItem}>Projekt</a>
-            </Link>
-          </li>
-        </ul>
+    <>
+      <nav className={styles.navbar}>
+        <div className={styles.inner}>
+          <h1 className={styles.logo}>Hugo Nilsson</h1>
+        </div>
+      </nav>
+      <div className={`${hamburgerstyles.hamburger} ${menuOpen ? hamburgerstyles.open : ''}`} onClick={toggleMenu}>
+        <div className={`${hamburgerstyles.line} ${hamburgerstyles.top}`}></div>
+        <div className={`${hamburgerstyles.line} ${hamburgerstyles.middle}`}></div>
+        <div className={`${hamburgerstyles.line} ${hamburgerstyles.bottom}`}></div>
       </div>
-    </nav>
+      <MenuModal isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+    </>
   );
 }

@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  overflow-x: hidden;
+  top: 0;
+  left: -100%;
+  width: 280px;
+  height: 100%;
+  background-color: var(--color-bg-primary);
+  opacity: 0.8;
+  transition: left 0.5s ease-in-out;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.show {
+  left: 0;
+}
+
+.menuFirst ul {
+  list-style: none;
+  padding: 4rem 0 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.menuSecond ul {
+  list-style: none;
+  padding: 6rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.menuFirst li {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.menuSecond li {
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.menuFirst li:hover,
+.menuSecond li:hover {
+  transform: translateX(5px);
+}
+
+.menuFirst a,
+.menuSecond a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.menuSecond a {
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: 1.5rem;
+}

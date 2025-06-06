@@ -6,14 +6,19 @@ export default function Hero() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.label}>my story</p>
-        <h1 className={styles.heading}>
-          Technology is powerful, but it’s only as impactful as the hands that shape it.
+        <h1 id='heading1' className={`${styles.heading} ${styles.heading1}`}>
+          SOFTWARE
+        </h1>
+        <h1 id='heading2' className={`${styles.heading} ${styles.heading2}`}>
+          DEVELOPMENT
+        </h1>
+        <h1 id='heading3' className={`${styles.heading} ${styles.heading3}`}>
+          STUDENT
         </h1>
         <div className={styles.buttonContainer}>
-          <button className={styles.buttonPrimary}>För kunder</button>
+          <button className="button-primary">DOWNLOAD CV</button>
           <Link href="/projects">
-            <button className={styles.buttonSecondary}>Se mina projekt</button>
+            <button className="button-primary">PROJECTS</button>
           </Link>
         </div>
       </div>
