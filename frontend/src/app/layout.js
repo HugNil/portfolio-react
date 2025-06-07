@@ -18,6 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="sv">
+      <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+      />
       <body className={jost.className}>
         <Navbar />
         {children}

@@ -2,6 +2,7 @@
 import styles from '../styles/components/About.module.css';
 import Image from 'next/image';
 import profilePic from '../assets/profile.jpg';
+import TechStack from './TechStack';
 
 export default function About() {
   return (
@@ -18,6 +19,9 @@ export default function About() {
             <Image src={profilePic} alt="Profile picture" className={styles.img} width={300} height={300} />
           </div>
         </div>
+        <section>
+          <TechStack />
+        </section>
       </div>
     </section>
   );

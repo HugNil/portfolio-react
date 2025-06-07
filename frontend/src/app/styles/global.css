@@ -60,6 +60,7 @@ p, span, li {
   align-items: center;
   justify-content: baseline;
   color: var(--color-text-primary);
+  gap: 2rem;
 }
 
 .section {
