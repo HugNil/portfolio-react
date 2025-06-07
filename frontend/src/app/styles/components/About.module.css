@@ -4,12 +4,51 @@
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  margin-top: 4rem;
   color: var(--color-text-primary);
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+}
+
+.textContainer {
+  flex: 1;
+  max-width: 500px;
 }
 
 .paragraph {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   margin-bottom: 1rem;
+  text-align: left;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+}
+
+.img {
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+/* Responsivitet för mobila enheter */
+@media (max-width: 768px) {
+  .contentContainer {
+    flex-direction: column-reverse;
+  }
+  
+  .paragraph {
+    text-align: center;
+  }
+  
+  .imageContainer {
+    margin-bottom: 1rem;
+  }
 }

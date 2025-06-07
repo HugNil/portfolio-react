@@ -14,7 +14,7 @@
 .container {
   width: 100%;
   margin: 0;
-  padding: 0 3rem;
+  padding: 0 8rem;
 }
 
 .heading {
@@ -25,6 +25,8 @@
   line-height: 1.2;
   width: 100%;
   text-align: inherit;
+  pointer-events: none;
+  text-shadow: -0.2px -0.2px 0 #000000, 0.2px -0.2px 0 #000000, -0.2px 0.2px 0 #000000, 0.2px 0.2px 0 #000000;
 }
 
 .heading1 {

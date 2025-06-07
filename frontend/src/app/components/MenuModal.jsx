@@ -1,8 +1,11 @@
+// filepath: c:\Users\02hug\Desktop\portfolio-react\frontend\src\app\components\MenuModal.jsx
 import styles from '../styles/components/MenuModal.module.css';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-export default function MenuModal({ isOpen, onClose }) {  // Close menu when pressing Escape key or clicking outside
+export default function MenuModal({ isOpen, onClose }) {
+  // Close menu when pressing Escape key or clicking outside
   useEffect(() => {
     const handleEscKey = (e) => {
       if (isOpen && e.key === 'Escape') {
@@ -33,25 +36,105 @@ export default function MenuModal({ isOpen, onClose }) {  // Close menu when pre
   }, [isOpen, onClose]);
 
   return (
-    <>
-      <div className={`${styles.overlay} ${isOpen ? styles.show : ''}`}>
-        <div className={styles.menuFirst}>
-          <ul>
-            <li><Link href="/" onClick={onClose}>HOME</Link></li>
-            <li><Link href="/projects" onClick={onClose}>PROJECTS</Link></li>
-            <li><Link href="/about" onClick={onClose}>ABOUT</Link></li>
-            <li><Link href="/contact" onClick={onClose}>CONTACT</Link></li>
-          </ul>
-        </div>
-        <div className={styles.menuSecond}>
-          <ul>
-            <li><Link href="/resume" onClick={onClose}>DOWNLOAD CV</Link></li>
-            <li><Link href="https://github.com" target="_blank" rel="noopener noreferrer" onClick={onClose}>GITHUB</Link></li>
-            <li><Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" onClick={onClose}>LINKEDIN</Link></li>
-            <li><Link href="mailto:me@email.com" onClick={onClose}>EMAIL</Link></li>
-          </ul>
-        </div>
-      </div>
-    </>
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            className={styles.backdrop}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={onClose}
+          />
+          <motion.div 
+            className={styles.overlay}
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 300, 
+              damping: 30,
+              duration: 0.5 
+            }}
+          >
+            <motion.div 
+              className={styles.menuFirst}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+            >
+              <ul>
+                {['HOME', 'PROJECTS', 'ABOUT', 'CONTACT'].map((item, index) => (
+                  <motion.li 
+                    key={item}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      delay: 0.1 + index * 0.1,
+                      duration: 0.4,
+                      ease: "easeOut"
+                    }}
+                    whileHover={{ 
+                      x: 5, 
+                      transition: { duration: 0.2 } 
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link 
+                      href={item === 'HOME' ? '/' : `/${item.toLowerCase()}`} 
+                      onClick={onClose}
+                    >
+                      {item}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div 
+              className={styles.menuSecond}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.4 }}
+            >
+              <ul>
+                {[
+                  { name: 'DOWNLOAD CV', href: '/resume' },
+                  { name: 'GITHUB', href: 'https://github.com', external: true },
+                  { name: 'LINKEDIN', href: 'https://www.linkedin.com/in/hugo-nilsson-80b33621b/?locale=sv_SE', external: true },
+                  { name: 'EMAIL', href: 'mailto:me@email.com' }
+                ].map((item, index) => (
+                  <motion.li 
+                    key={item.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      delay: 0.1 + index * 0.1,
+                      duration: 0.4,
+                      ease: "easeOut"
+                    }}
+                    whileHover={{ 
+                      x: 5, 
+                      transition: { duration: 0.2 } 
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link 
+                      href={item.href} 
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
+                      onClick={onClose}
+                    >
+                      {item.name}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 }

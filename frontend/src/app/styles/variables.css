@@ -1,11 +1,12 @@
 /* src/app/styles/variables.css */
 :root {
   --font-sans: 'Jost', sans-serif;
-  --color-bg-primary: #141414;
+  --color-bg-primary: #1e2b23;
   --color-bg-secondary: #FFFFFF;
   --color-text-primary: #ffffff;
   --color-text-secondary: #000000;
-  --color-accent-blue: #00AAFF;
+  --color-accent-green: #4b6e52;
   --color-accent-dark: #1F2937;
-  --hero-background: url('../assets/IMG20240703130257-EDIT(1).png');
+  --hover-color: #6f886b;
+  --hero-background: url('../assets/IMG20240703130257-EDIT (3).jpg');
 }
