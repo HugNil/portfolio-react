@@ -24,20 +24,24 @@ export default function Contact() {
           <a href="mailto:youremail@example.com" className={styles.link}><img src={EmailIcon.src} alt="Email" /></a>
           <a href="https://github.com/hugnil" target="_blank" rel="noopener noreferrer" className={styles.link}><i style={{ fontSize: '48px' }} className="devicon-github-original"></i></a>
           <a href="https://www.linkedin.com/in/hugo-nilsson-80b33621b/?locale=sv_SE" target="_blank" rel="noopener noreferrer" className={styles.link}><i style={{ fontSize: '48px' }} className="devicon-linkedin-plain"></i></a>
-        </article>        <Link 
-          href="/" 
-          className={styles.arrowLink}
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-            window.history.pushState({}, '', '/');
-          }}
-        >
-          <img className={styles.arrowImage} src={Arrow.src} alt="Arrow" />
-        </Link>
+        </article>   
+        <div className={styles.arrowContainer}>
+          <Link 
+            href="/" 
+            className={styles.arrowLink}
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+              window.history.pushState({}, '', '/');
+            }}
+          >
+            <img className={styles.arrowImage} src={Arrow.src} alt="Arrow" />
+          </Link>
+        </div>     
+        
       </div>
     </section>
   );
