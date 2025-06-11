@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
         <div className={styles.buttonContainer}>
           <button className="button-primary">DOWNLOAD CV</button>
-          <Link href="/projects">
+          <Link href="#projects">
             <button className="button-primary">PROJECTS</button>
           </Link>
         </div>

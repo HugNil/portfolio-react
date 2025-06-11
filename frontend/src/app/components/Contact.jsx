@@ -1,8 +1,10 @@
-// src/app/components/Contact.jsx
 'use client';
 
 import { useState } from 'react';
 import styles from '../styles/components/Contact.module.css';
+import EmailIcon from '../assets/new-post-64.png';
+import Arrow from '../assets/up-circular-48.png';
+import Link from 'next/link';
 
 export default function Contact() {
   const [status, setStatus] = useState('idle');
@@ -10,64 +12,32 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('pending');
-    // Exempel: anropa en API-route senare…
     setTimeout(() => {
       setStatus('success');
     }, 1000);
   };
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id='contact'>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Kontakt</h2>
-
-        {status === 'success' ? (
-          <p style={{ fontSize: '1rem', color: 'var(--color-text-secondary)' }}>
-            Tack! Jag återkommer snart.
-          </p>
-        ) : (
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <label className={styles.label}>
-              <span className={styles.labelText}>Namn</span>
-              <input
-                className={styles.input}
-                type="text"
-                name="name"
-                required
-              />
-            </label>
-
-            <label className={styles.label}>
-              <span className={styles.labelText}>E-post</span>
-              <input
-                className={styles.input}
-                type="email"
-                name="email"
-                required
-              />
-            </label>
-
-            <label className={styles.label}>
-              <span className={styles.labelText}>Meddelande</span>
-              <textarea
-                className={styles.textarea}
-                name="message"
-                rows="4"
-                required
-              />
-            </label>
-
-            <button className={`buttonPrimary ${styles.buttonPrimary}`} type="submit">
-              {status === 'pending' ? 'Skickar...' : 'Skicka'}
-            </button>
-          </form>
-        )}
-
-        <div className={styles.socialLinks}>
-          <a href="mailto:youremail@example.com" className={styles.link}>E-post</a>
-          <a href="https://github.com/ditt-anvandarnamn" className={styles.link}>GitHub</a>
-          <a href="https://linkedin.com/in/ditt-anvandarnamn" className={styles.link}>LinkedIn</a>
-        </div>
+        <h2 className={styles.heading}>Reach out<mark>!</mark></h2>        <article className={styles.socialLinks}>
+          <a href="mailto:youremail@example.com" className={styles.link}><img src={EmailIcon.src} alt="Email" /></a>
+          <a href="https://github.com/hugnil" target="_blank" rel="noopener noreferrer" className={styles.link}><i style={{ fontSize: '48px' }} className="devicon-github-original"></i></a>
+          <a href="https://www.linkedin.com/in/hugo-nilsson-80b33621b/?locale=sv_SE" target="_blank" rel="noopener noreferrer" className={styles.link}><i style={{ fontSize: '48px' }} className="devicon-linkedin-plain"></i></a>
+        </article>        <Link 
+          href="/" 
+          className={styles.arrowLink}
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+            window.history.pushState({}, '', '/');
+          }}
+        >
+          <img className={styles.arrowImage} src={Arrow.src} alt="Arrow" />
+        </Link>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import TechStack from './TechStack';
 
 export default function About() {
   return (
-    <section className='section'>
+    <section className='section' id='about'>
       <div className='container'>
         <h1 className={styles.heading}>About Me</h1>
         <div className={styles.contentContainer}>

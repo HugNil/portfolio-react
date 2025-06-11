@@ -81,10 +81,21 @@ export default function MenuModal({ isOpen, onClose }) {
                       transition: { duration: 0.2 } 
                     }}
                     whileTap={{ scale: 0.95 }}
-                  >
-                    <Link 
-                      href={item === 'HOME' ? '/' : `/${item.toLowerCase()}`} 
-                      onClick={onClose}
+                  >                    <Link 
+                      href={item === 'HOME' ? '/' : `#${item.toLowerCase()}`} 
+                      onClick={(e) => {
+                        if (item === 'HOME') {
+                          e.preventDefault();
+                          onClose();
+                          window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                          });
+                          window.history.pushState({}, '', '/');
+                        } else {
+                          onClose();
+                        }
+                      }}
                     >
                       {item}
                     </Link>
@@ -101,9 +112,9 @@ export default function MenuModal({ isOpen, onClose }) {
               <ul>
                 {[
                   { name: 'DOWNLOAD CV', href: '/resume' },
-                  { name: 'GITHUB', href: 'https://github.com', external: true },
-                  { name: 'LINKEDIN', href: 'https://www.linkedin.com/in/hugo-nilsson-80b33621b/?locale=sv_SE', external: true },
-                  { name: 'EMAIL', href: 'mailto:me@email.com' }
+                  { name: 'GITHUB', href: 'https://github.com/hugnil', external: true },
+                  { name: 'LINKEDIN', href: 'https://www.linkedin.com/in/hugo-nilsson-80b33621b/sv/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people%3BugARs1P5T3KZPyOfrkYEvQ%3D%3D', external: true },
+                  { name: 'EMAIL', href: 'mailto:hugo.nilsson0002@gmail.com' }
                 ].map((item, index) => (
                   <motion.li 
                     key={item.name}
