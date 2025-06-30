@@ -171,23 +171,267 @@
 }
 
 /* Responsivitet */
+
+/* Extra stora skärmar (1400px+) */
+@media (min-width: 1400px) {
+  .stack {
+    width: 1600px;
+    gap: 4rem;
+  }
+  
+  .categoryCard {
+    max-width: 320px;
+    padding: 2rem;
+  }
+  
+  .stackTitle {
+    font-size: 2.75rem;
+  }
+}
+
+/* Stora skärmar (1200px - 1399px) */
+@media (max-width: 1399px) {
+  .stack {
+    width: 1200px;
+    gap: 3rem;
+  }
+  
+  .categoryCard {
+    max-width: 300px;
+  }
+}
+
+/* Mellanstora skärmar (992px - 1199px) */
+@media (max-width: 1199px) {
+  .stackSection {
+    padding-top: 3rem;
+  }
+  
+  .stack {
+    width: 100%;
+    max-width: 1000px;
+    gap: 2.5rem;
+    padding: 0 2rem;
+  }
+  
+  .categoryCard {
+    max-width: 280px;
+  }
+  
+  .stackTitle {
+    font-size: 2.25rem;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .stackSection {
+    padding-top: 2.5rem;
+  }
+  
+  .stack {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .categoryCard {
+    max-width: 320px;
+    padding: 1.25rem;
+  }
+  
+  .stackTitle {
+    font-size: 2rem;
+  }
+  
+  .categoryTitle {
+    font-size: 1.375rem;
+  }
+}
+
+/* Mobila enheter (768px och mindre) */
 @media (max-width: 768px) {
+  .stackSection {
+    padding-top: 2rem;
+  }
+  
   .stack {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
   
   .categoryCard {
     max-width: 90%;
+    min-width: 280px;
+    padding: 1.5rem;
+  }
+  
+  .stackCardSection {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .stackTitle {
+    font-size: 1.875rem;
+  }
+  
+  .categoryTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+  
+  .stackCard {
+    min-height: 90px;
+    padding: 0.75rem;
+  }
+  
+  .techImg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .techImageContainer {
+    height: 45px;
+  }
+  
+  .techName {
+    font-size: 0.8rem;
+  }
+}
+
+/* Små mobiler (576px och mindre) */
+@media (max-width: 576px) {
+  .stackSection {
+    padding-top: 1.5rem;
+  }
+  
+  .stack {
+    gap: 1.25rem;
+    padding: 0 0.75rem;
+  }
+  
+  .categoryCard {
+    max-width: 95%;
+    min-width: 260px;
+    padding: 1.25rem;
   }
   
   .stackCardSection {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .stackTitle {
+    font-size: 1.625rem;
+  }
+  
+  .categoryTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stackCard {
+    min-height: 80px;
+    padding: 0.5rem;
+  }
+  
+  .techImg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .techImageContainer {
+    height: 40px;
+    margin-bottom: 0.25rem;
+  }
+  
+  .techName {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
   }
 }
 
+/* Extra små mobiler (480px och mindre) */
 @media (max-width: 480px) {
+  .stackSection {
+    padding-top: 1rem;
+  }
+  
+  .stack {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .categoryCard {
+    min-width: 240px;
+    padding: 1rem;
+  }
+  
   .stackCardSection {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .stackTitle {
+    font-size: 1.5rem;
+  }
+  
+  .categoryTitle {
+    font-size: 1rem;
+  }
+  
+  .stackCard {
+    min-height: 70px;
+    padding: 0.75rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .techImageContainer {
+    height: 35px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  
+  .techImg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .techName {
+    font-size: 0.8rem;
+    margin-top: 0;
+    text-align: left;
+    flex-grow: 1;
+  }
+}
+
+/* Extra små skärmar (360px och mindre) */
+@media (max-width: 360px) {
+  .categoryCard {
+    min-width: 220px;
+    padding: 0.875rem;
+  }
+  
+  .stackTitle {
+    font-size: 1.375rem;
+  }
+  
+  .techName {
+    font-size: 0.75rem;
+  }
+  
+  .stack {
+    padding: 0 0.25rem;
   }
 }

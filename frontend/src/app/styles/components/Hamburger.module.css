@@ -87,3 +87,178 @@
   color: black;
   font-size: 18px;
 }
+
+/* Mobil anpassning för hamburger */
+@media (max-width: 768px) {
+  .hamburger {
+    top: 25px;
+    left: 20px;
+    width: 28px;
+    height: 20px;
+  }
+  
+  .line {
+    height: 3px;
+  }
+  
+  .line.middle {
+    top: 8px;
+  }
+  
+  .line.bottom {
+    top: 16px;
+  }
+  
+  .hamburger.open .line.top {
+    top: 8px;
+  }
+  
+  .hamburger.open .line.bottom {
+    top: 8px;
+  }
+  
+  .hamburger.open {
+    transform: translateX(180px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    top: 20px;
+    left: 15px;
+    width: 26px;
+    height: 18px;
+  }
+  
+  .line {
+    height: 2.5px;
+  }
+  
+  .line.middle {
+    top: 7px;
+  }
+  
+  .line.bottom {
+    top: 14px;
+  }
+  
+  .hamburger.open .line.top {
+    top: 7px;
+  }
+  
+  .hamburger.open .line.bottom {
+    top: 7px;
+  }
+  
+  .hamburger.open {
+    transform: translateX(160px);
+  }
+}
+
+/* Förbättra touch target och responsivitet för mobil */
+@media (max-width: 768px) {
+  .hamburger::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    /* Utökar klickområdet för bättre touch-användning */
+  }
+  
+  .hamburger {
+    width: 32px;
+    height: 24px;
+    top: 25px;
+    left: 25px;
+  }
+  
+  .line {
+    height: 3px;
+  }
+  
+  .line.middle {
+    top: 10.5px;
+  }
+  
+  .line.bottom {
+    top: 21px;
+  }
+  
+  .hamburger.open .line.top {
+    top: 10.5px;
+  }
+  
+  .hamburger.open .line.bottom {
+    top: 10.5px;
+  }
+  
+  .hamburger.open {
+    transform: translateX(180px);
+  }
+}
+
+/* Små mobiler (576px och mindre) */
+@media (max-width: 576px) {
+  .hamburger {
+    width: 28px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .line {
+    height: 2.5px;
+  }
+  
+  .line.middle {
+    top: 8.75px;
+  }
+  
+  .line.bottom {
+    top: 17.5px;
+  }
+  
+  .hamburger.open .line.top {
+    top: 8.75px;
+  }
+  
+  .hamburger.open .line.bottom {
+    top: 8.75px;
+  }
+  
+  .hamburger.open {
+    transform: translateX(160px);
+  }
+}
+
+/* Extra små mobiler (400px och mindre) */
+@media (max-width: 400px) {
+  .hamburger {
+    top: 18px;
+    left: 18px;
+    width: 26px;
+    height: 18px;
+  }
+  
+  .line.middle {
+    top: 7.5px;
+  }
+  
+  .line.bottom {
+    top: 15px;
+  }
+  
+  .hamburger.open .line.top {
+    top: 7.5px;
+  }
+  
+  .hamburger.open .line.bottom {
+    top: 7.5px;
+  }
+  
+  .hamburger.open {
+    transform: translateX(140px);
+  }
+}

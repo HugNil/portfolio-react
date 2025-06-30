@@ -9,39 +9,15 @@ import Link from 'next/link';
 export default function Contact() {
   const [status, setStatus] = useState('idle');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('pending');
-    setTimeout(() => {
-      setStatus('success');
-    }, 1000);
-  };
-
   return (
     <section className={styles.section} id='contact'>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Reach out<mark>!</mark></h2>        <article className={styles.socialLinks}>
+        <h2 className={styles.heading}>Reach out<mark>!</mark></h2>
+        <article className={styles.socialLinks}>
           <a href="mailto:youremail@example.com" className={styles.link}><img src={EmailIcon.src} alt="Email" /></a>
           <a href="https://github.com/hugnil" target="_blank" rel="noopener noreferrer" className={styles.link}><i style={{ fontSize: '48px' }} className="devicon-github-original"></i></a>
           <a href="https://www.linkedin.com/in/hugo-nilsson-80b33621b/?locale=sv_SE" target="_blank" rel="noopener noreferrer" className={styles.link}><i style={{ fontSize: '48px' }} className="devicon-linkedin-plain"></i></a>
         </article>   
-        <div className={styles.arrowContainer}>
-          <Link 
-            href="/" 
-            className={styles.arrowLink}
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-              });
-              window.history.pushState({}, '', '/');
-            }}
-          >
-            <img className={styles.arrowImage} src={Arrow.src} alt="Arrow" />
-          </Link>
-        </div>     
-        
       </div>
     </section>
   );

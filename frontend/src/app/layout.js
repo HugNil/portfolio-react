@@ -3,6 +3,7 @@ import './styles/reset.css';
 import './styles/variables.css';
 import './styles/global.css';
 import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 import { Jost } from 'next/font/google';
 
 const jost = Jost({
@@ -13,6 +14,11 @@ const jost = Jost({
 export const metadata = {
   title: 'Min Portfolio',
   description: 'En ljus, tidlös portfolio byggd med Next.js',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -27,6 +33,7 @@ export default function RootLayout({ children }) {
       <body className={jost.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

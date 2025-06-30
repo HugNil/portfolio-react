@@ -39,17 +39,121 @@
   object-fit: cover;
 }
 
+/* Stora skärmar (1200px+) */
+@media (min-width: 1200px) {
+  .contentContainer {
+    gap: 12rem;
+  }
+  
+  .heading {
+    font-size: 2.75rem;
+  }
+  
+  .paragraph {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mellanstora skärmar (992px - 1199px) */
+@media (max-width: 1199px) {
+  .contentContainer {
+    gap: 6rem;
+  }
+  
+  .heading {
+    font-size: 2.25rem;
+    margin-top: 3rem;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .contentContainer {
+    gap: 4rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+  }
+  
+  .textContainer {
+    max-width: none;
+  }
+}
+
 /* Responsivitet för mobila enheter */
 @media (max-width: 768px) {
   .contentContainer {
     flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 1.875rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .textContainer {
+    max-width: 100%;
   }
   
   .paragraph {
     text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
   }
   
   .imageContainer {
     margin-bottom: 1rem;
+  }
+  
+  .img {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+/* Mobiler (under 576px) */
+@media (max-width: 575px) {
+  .heading {
+    font-size: 1.625rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .paragraph {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .img {
+    max-width: 160px;
+  }
+  
+  .contentContainer {
+    gap: 1.5rem;
+  }
+}
+
+/* Extra små mobiler (under 400px) */
+@media (max-width: 399px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .paragraph {
+    font-size: 0.875rem;
+    padding: 0 0.25rem;
+  }
+  
+  .img {
+    max-width: 140px;
   }
 }

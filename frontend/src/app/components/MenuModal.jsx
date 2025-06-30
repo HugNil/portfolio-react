@@ -93,7 +93,14 @@ export default function MenuModal({ isOpen, onClose }) {
                           });
                           window.history.pushState({}, '', '/');
                         } else {
+                          e.preventDefault();
                           onClose();
+                          const targetElement = document.getElementById(item.toLowerCase());
+                          if (targetElement) {
+                            targetElement.scrollIntoView({
+                              behavior: 'smooth'
+                            });
+                          }
                         }
                       }}
                     >

@@ -3,18 +3,61 @@
     "id": "weather-app",
     "title": "Väderapp",
     "description": "En enkel väderapplikation byggd med React och OpenWeather API.",
-    "technologies": ["React", "CSS", "OpenWeather API"],
-    "image": "/assets/weather-app.png",
+    "longDescription": "En fullständig väderapplikation som visar aktuellt väder och 5-dagars prognos. Användare kan söka efter städer världen över och se detaljerad väderinformation inklusive temperatur, luftfuktighet, vindstyrka och mycket mer. Applikationen har en responsiv design och fungerar perfekt på alla enheter.",
+    "technologies": ["React", "CSS", "OpenWeather API", "JavaScript", "Responsive Design"],
+    "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
+    "images": ["https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop"],
     "liveUrl": "https://exempel.com/weather-app",
-    "repoUrl": "https://github.com/ditt-anvandarnamn/weather-app"
+    "repoUrl": "https://github.com/ditt-anvandarnamn/weather-app",
+    "features": [
+      "Aktuellt väder för valfri stad",
+      "5-dagars väderprognos",
+      "Detaljerad väderinformation",
+      "Responsiv design",
+      "Snabb sökning"
+    ],
+    "challenges": "Den största utmaningen var att hantera API-anrop effektivt och skapa en smidig användarupplevelse med loading states.",
+    "learnings": "Jag lärde mig mycket om API-integration, async/await och hur man hanterar externa tjänster i React."
   },
   {
     "id": "portfolio-site",
     "title": "Min Portfolio",
     "description": "Denna portfolio-sida byggd med Next.js och vanlig CSS.",
-    "technologies": ["Next.js", "React", "CSS"],
-    "image": "/assets/portfolio-site.png",
+    "longDescription": "En modern och responsiv portfolio-webbplats byggd från grunden med Next.js och vanlig CSS. Siten visar mina projekt, färdigheter och erfarenheter på ett professionellt sätt. Designen är ren och minimalistisk med fokus på användarvänlighet och prestanda.",
+    "technologies": ["Next.js", "React", "CSS", "JavaScript", "Responsive Design"],
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop",
+    "images": ["https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop"],
     "liveUrl": "https://dittdomän.se",
-    "repoUrl": "https://github.com/ditt-anvandarnamn/portfolio"
+    "repoUrl": "https://github.com/ditt-anvandarnamn/portfolio",
+    "features": [
+      "Responsiv design",
+      "Projekt showcase",
+      "Kontaktformulär",
+      "Smooth scrolling",
+      "Modern UI/UX"
+    ],
+    "challenges": "Att skapa en balanserad design som är både visuellt tilltalande och funktionell var en utmaning.",
+    "learnings": "Projektet lärde mig mycket om modern CSS, Next.js routing och hur man bygger professionella webbplatser."
+  },
+  {
+    "id": "todo-app",
+    "title": "Todo Applikation",
+    "description": "En kraftfull todo-app med kategorier och deadlines.",
+    "longDescription": "En omfattande todo-applikation som låter användare skapa, organisera och hantera sina uppgifter effektivt. Applikationen stöder kategorier, prioritetsnivåer, deadlines och påminnelser. All data sparas lokalt i webbläsaren så att användarens uppgifter bevaras mellan sessioner.",
+    "technologies": ["React", "TypeScript", "CSS Modules", "Local Storage", "Context API"],
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop",
+    "images": ["https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop"],
+    "liveUrl": "https://exempel.com/todo-app",
+    "repoUrl": "https://github.com/ditt-anvandarnamn/todo-app",
+    "features": [
+      "Skapa och hantera uppgifter",
+      "Kategorisering av todos",
+      "Prioritetsnivåer",
+      "Deadline-hantering",
+      "Lokalt sparande",
+      "Sök och filtrera"
+    ],
+    "challenges": "Att designa en intuitiv användarupplevelse för komplex funktionalitet var utmanande, särskilt state management.",
+    "learnings": "Jag fördjupade mina kunskaper inom React hooks, TypeScript och designmönster för state management."
   }
 ]

@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-
+  padding: 2rem 0;
 }
 
 .container {
@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .heading {
@@ -33,6 +34,7 @@
   justify-content: center;
   gap: 3rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .heading mark {
@@ -55,13 +57,122 @@
 
 .arrowContainer {
   margin: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link {
   display: inline-block;
   cursor: pointer;
   transition: transform 0.3s ease;
+  padding: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .link:hover {
   transform: translateY(-5px);
+}
+
+/* Tablets och större mobiler (768px - 991px) */
+@media (max-width: 991px) {
+  .section {
+    min-height: 400px;
+    padding: 1.5rem 0;
+  }
+  
+  .heading {
+    font-size: 2.25rem;
+    margin-top: 3rem;
+  }
+  
+  .socialLinks {
+    gap: 2.5rem;
+  }
+  
+  .arrowContainer {
+    margin: 60px;
+  }
+}
+
+/* Mobila enheter (768px och mindre) */
+@media (max-width: 768px) {
+  .section {
+    min-height: 350px;
+    padding: 1rem 0;
+  }
+  
+  .container {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .socialLinks {
+    gap: 2rem;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .arrowContainer {
+    margin: 40px auto;
+  }
+}
+
+/* Små mobiler (576px och mindre) */
+@media (max-width: 576px) {
+  .section {
+    min-height: 300px;
+  }
+  
+  .container {
+    gap: 1.25rem;
+    padding: 0 0.75rem;
+  }
+  
+  .heading {
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .socialLinks {
+    gap: 1.5rem;
+    max-width: 250px;
+  }
+  
+  .link {
+    padding: 0.75rem;
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  .arrowContainer {
+    margin: 30px auto;
+  }
+}
+
+/* Extra små mobiler (400px och mindre) */
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .socialLinks {
+    gap: 1.25rem;
+    max-width: 200px;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
 }
