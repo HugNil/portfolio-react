@@ -7,8 +7,8 @@
     "technologies": ["Next.js", "React", "JavaScript", "Responsive Design", "Framer motion", "CSS Modules", "App Router"],
     "image": "/Portfolio.PNG",
     "images": ["/Portfolio.PNG"],
-    "liveUrl": "https://exempel.com/weather-app",
-    "repoUrl": "https://github.com/ditt-anvandarnamn/weather-app",
+    "liveUrl": "https://hugonilsson.vercel.app/",
+    "repoUrl": "https://github.com/HugNil/portfolio-react",
     "features": [
       "Project Showcase",
       "Responsive Design",
