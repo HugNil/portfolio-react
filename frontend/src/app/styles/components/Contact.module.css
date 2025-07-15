@@ -34,7 +34,7 @@
   justify-content: center;
   gap: 3rem;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .heading mark {
@@ -63,21 +63,32 @@
 }
 
 .link {
-  display: inline-block;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  padding: 0.5rem;
-  min-height: 44px;
-  min-width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 0.5rem;
+  min-height: 48px;
+  min-width: 48px;
+  border-radius: 8px;
+  background-color: transparent;
 }
+
 .link:hover {
   transform: translateY(-5px);
 }
 
-/* Tablets och större mobiler (768px - 991px) */
+.link img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.link i {
+  font-size: 48px !important;
+}
+
 @media (max-width: 991px) {
   .section {
     min-height: 400px;
@@ -98,7 +109,6 @@
   }
 }
 
-/* Mobila enheter (768px och mindre) */
 @media (max-width: 768px) {
   .section {
     min-height: 350px;
@@ -118,9 +128,9 @@
   
   .socialLinks {
     gap: 2rem;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
   }
   
   .arrowContainer {
@@ -128,7 +138,6 @@
   }
 }
 
-/* Små mobiler (576px och mindre) */
 @media (max-width: 576px) {
   .section {
     min-height: 300px;
@@ -147,13 +156,23 @@
   
   .socialLinks {
     gap: 1.5rem;
-    max-width: 250px;
+    max-width: 200px;
+    justify-content: center;
   }
   
   .link {
-    padding: 0.75rem;
+    padding: 0.5rem;
     min-height: 48px;
     min-width: 48px;
+  }
+  
+  .link img {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .link i {
+    font-size: 44px !important;
   }
   
   .arrowContainer {
@@ -161,18 +180,33 @@
   }
 }
 
-/* Extra små mobiler (400px och mindre) */
 @media (max-width: 400px) {
   .heading {
     font-size: 1.5rem;
   }
   
   .socialLinks {
-    gap: 1.25rem;
-    max-width: 200px;
+    gap: 1rem;
+    max-width: 180px;
+    justify-content: center;
   }
   
   .container {
     padding: 0 0.5rem;
+  }
+  
+  .link {
+    padding: 0.25rem;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .link img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .link i {
+    font-size: 40px !important;
   }
 }

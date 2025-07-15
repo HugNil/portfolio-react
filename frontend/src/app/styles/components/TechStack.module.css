@@ -30,21 +30,18 @@
 
 .stack {
   width: 100%;
-  width: 1500px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
+  justify-items: center;
 }
 
 .categoryCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 280px;
+  width: 280px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 16px;
@@ -173,9 +170,10 @@
 /* Responsivitet */
 
 /* Extra stora skärmar (1400px+) */
-@media (min-width: 1400px) {
+@media (max-width: 1599px) {
   .stack {
-    width: 1600px;
+    max-width: 1600px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
   }
   
@@ -192,7 +190,8 @@
 /* Stora skärmar (1200px - 1399px) */
 @media (max-width: 1399px) {
   .stack {
-    width: 1200px;
+    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
   
@@ -201,17 +200,15 @@
   }
 }
 
-/* Mellanstora skärmar (992px - 1199px) */
 @media (max-width: 1199px) {
   .stackSection {
     padding-top: 3rem;
   }
   
   .stack {
-    width: 100%;
     max-width: 1000px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
-    padding: 0 2rem;
   }
   
   .categoryCard {
@@ -227,15 +224,14 @@
   }
 }
 
-/* Tablets (768px - 991px) */
 @media (max-width: 991px) {
   .stackSection {
     padding-top: 2.5rem;
   }
   
   .stack {
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 0 1.5rem;
   }
   
   .categoryCard {
@@ -252,17 +248,14 @@
   }
 }
 
-/* Mobila enheter (768px och mindre) */
 @media (max-width: 768px) {
   .stackSection {
     padding-top: 2rem;
   }
   
   .stack {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
   }
   
   .categoryCard {
@@ -316,7 +309,6 @@
   
   .stack {
     gap: 1.25rem;
-    padding: 0 0.75rem;
   }
   
   .categoryCard {
@@ -360,7 +352,6 @@
   }
 }
 
-/* Extra små mobiler (480px och mindre) */
 @media (max-width: 480px) {
   .stackSection {
     padding-top: 1rem;
@@ -368,7 +359,6 @@
   
   .stack {
     gap: 1rem;
-    padding: 0 0.5rem;
   }
   
   .categoryCard {
@@ -416,7 +406,6 @@
   }
 }
 
-/* Extra små skärmar (360px och mindre) */
 @media (max-width: 360px) {
   .categoryCard {
     min-width: 220px;
@@ -429,9 +418,5 @@
   
   .techName {
     font-size: 0.75rem;
-  }
-  
-  .stack {
-    padding: 0 0.25rem;
   }
 }

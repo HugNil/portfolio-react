@@ -70,6 +70,8 @@
 @media (max-width: 991px) {
   .contentContainer {
     gap: 4rem;
+    margin: 0 auto;
+    padding: 0 var(--padding-x);
   }
   
   .heading {
