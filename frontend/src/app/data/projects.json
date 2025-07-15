@@ -1,23 +1,22 @@
 [
   {
-    "id": "weather-app",
-    "title": "Väderapp",
-    "description": "En enkel väderapplikation byggd med React och OpenWeather API.",
-    "longDescription": "En fullständig väderapplikation som visar aktuellt väder och 5-dagars prognos. Användare kan söka efter städer världen över och se detaljerad väderinformation inklusive temperatur, luftfuktighet, vindstyrka och mycket mer. Applikationen har en responsiv design och fungerar perfekt på alla enheter.",
-    "technologies": ["React", "CSS", "OpenWeather API", "JavaScript", "Responsive Design"],
-    "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
-    "images": ["https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop"],
+    "id": "Portfolio Next.js",
+    "title": "Portfolio Next.js",
+    "description": "Simple portfolio site built with Next.js",
+    "longDescription": "A simple portfolio site showcasing my projects and skills, built with Next.js. The site features a clean design, responsive layout, and easy navigation. It includes sections for my work, skills, and contact information.",
+    "technologies": ["Next.js", "React", "JavaScript", "Responsive Design", "Framer motion", "CSS Modules", "App Router"],
+    "image": "/Portfolio.PNG",
+    "images": ["/Portfolio.PNG"],
     "liveUrl": "https://exempel.com/weather-app",
     "repoUrl": "https://github.com/ditt-anvandarnamn/weather-app",
     "features": [
-      "Aktuellt väder för valfri stad",
-      "5-dagars väderprognos",
-      "Detaljerad väderinformation",
-      "Responsiv design",
-      "Snabb sökning"
+      "Project Showcase",
+      "Responsive Design",
+      "Smooth Scrolling",
+      "Modern UI/UX"
     ],
-    "challenges": "Den största utmaningen var att hantera API-anrop effektivt och skapa en smidig användarupplevelse med loading states.",
-    "learnings": "Jag lärde mig mycket om API-integration, async/await och hur man hanterar externa tjänster i React."
+    "challenges": "To create a balanced design that is both visually appealing and functional was a challenge.",
+    "learnings": "I learned a lot about modern CSS, Next.js routing, and how to build professional websites."
   },
   {
     "id": "portfolio-site",
@@ -25,8 +24,8 @@
     "description": "Denna portfolio-sida byggd med Next.js och vanlig CSS.",
     "longDescription": "En modern och responsiv portfolio-webbplats byggd från grunden med Next.js och vanlig CSS. Siten visar mina projekt, färdigheter och erfarenheter på ett professionellt sätt. Designen är ren och minimalistisk med fokus på användarvänlighet och prestanda.",
     "technologies": ["Next.js", "React", "CSS", "JavaScript", "Responsive Design"],
-    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop",
-    "images": ["https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop"],
+    "image": "/Portfolio.PNG",
+    "images": ["/Portfolio.PNG"],
     "liveUrl": "https://dittdomän.se",
     "repoUrl": "https://github.com/ditt-anvandarnamn/portfolio",
     "features": [

@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import styles from '../styles/components/ProjectModal.module.css';
 
 export default function ProjectModal({ project, onClose }) {
-  // Stäng modal med Escape-tangenten
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
@@ -13,7 +12,6 @@ export default function ProjectModal({ project, onClose }) {
     };
 
     document.addEventListener('keydown', handleEscape);
-    // Förhindra scrollning på body när modal är öppen
     document.body.style.overflow = 'hidden';
 
     return () => {
@@ -22,7 +20,6 @@ export default function ProjectModal({ project, onClose }) {
     };
   }, [onClose]);
 
-  // Stäng modal när man klickar utanför innehållet
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -50,13 +47,14 @@ export default function ProjectModal({ project, onClose }) {
             alt={project.title}
             className={styles.headerImage}
           />
-          <div className={styles.headerContent}>
-            <h2 className={styles.title}>{project.title}</h2>
-            <p className={styles.description}>{project.longDescription}</p>
-          </div>
         </div>
 
         <div className={styles.content}>
+          <div className={styles.section}>
+            <h2 className={styles.title}>{project.title}</h2>
+            <p className={styles.description}>{project.longDescription}</p>
+          </div>
+
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>Teknologier</h3>
             <div className={styles.technologies}>
