@@ -7,6 +7,18 @@
   display: flex;
   align-items: center;
   padding-bottom: 2rem;
+  position: relative;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 500px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg-primary));
+  pointer-events: none;
 }
 
 .container {
@@ -71,6 +83,10 @@
 }
 
 @media (max-width: 767px) {
+  .section::after {
+    height: 80px;
+  }
+  
   .section {
     min-height: 70vh;
     align-items: center;
@@ -111,6 +127,10 @@
 }
 
 @media (max-width: 575px) {
+  .section::after {
+    height: 60px;
+  }
+  
   .section {
     min-height: 70vh;
     padding-top: 3rem;
@@ -135,6 +155,10 @@
 }
 
 @media (max-width: 479px) {
+  .section::after {
+    height: 50px;
+  }
+  
   .section {
     min-height: 70vh;
     padding-top: 2.5rem;
