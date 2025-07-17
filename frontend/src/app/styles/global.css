@@ -119,7 +119,6 @@ p, span, li {
   flex-grow: 1;
 }
 
-/* Mobil anpassningar för hela sidan */
 @media (max-width: 768px) {
   .container {
     gap: 2rem;
@@ -201,7 +200,6 @@ p, span, li {
   }
 }
 
-/* Förbättrade touch-targets för mobil */
 @media (max-width: 768px) {
   button, .button, a[role="button"] {
     min-height: 44px;
@@ -209,23 +207,19 @@ p, span, li {
   }
 }
 
-/* Förbättrade responsiva regler för bättre användarupplevelse */
 @media (hover: none) and (pointer: coarse) {
-  /* Mobila enheter med touch */
   button, .button, a[role="button"], .link {
     min-height: 48px;
     min-width: 48px;
     padding: 0.75rem 1rem;
   }
   
-  /* Större touch-områden för små element */
   .tech, .moreCount {
     min-height: 32px;
     padding: 0.5rem 0.75rem;
   }
 }
 
-/* Optimerade typografi skalor */
 @media (min-width: 1400px) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2.5rem; }
@@ -266,7 +260,6 @@ p, span, li {
   }
 }
 
-/* Förbättrade grid-system för olika skärmstorlekar */
 .grid-responsive {
   display: grid;
   gap: var(--spacing-lg);
@@ -298,7 +291,6 @@ p, span, li {
   }
 }
 
-/* Förbättrade animationer för prestanda */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -307,7 +299,6 @@ p, span, li {
   }
 }
 
-/* Optimering för högupplösta skärmar */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   img {
     image-rendering: -webkit-optimize-contrast;
@@ -315,14 +306,12 @@ p, span, li {
   }
 }
 
-/* Dark mode stöd för systempreferenser */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
   }
 }
 
-/* Print-stilar för bättre utskrift */
 @media print {
   *, *::before, *::after {
     background: transparent !important;

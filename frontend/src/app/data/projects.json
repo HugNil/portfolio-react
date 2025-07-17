@@ -1,6 +1,6 @@
 [
   {
-    "id": "Portfolio Next.js",
+    "id": "portfolio next.js",
     "title": "Portfolio Next.js",
     "description": "Simple portfolio site built with Next.js",
     "longDescription": "A simple portfolio site showcasing my projects and skills, built with Next.js. The site features a clean design, responsive layout, and easy navigation. It includes sections for my work, skills, and contact information.",
@@ -15,48 +15,47 @@
       "Smooth Scrolling",
       "Modern UI/UX"
     ],
-    "challenges": "To create a balanced design that is both visually appealing and functional was a challenge.",
-    "learnings": "I learned a lot about modern CSS, Next.js routing, and how to build professional websites."
+    "contributors": ["Hugo Nilsson"]
   },
   {
-    "id": "portfolio-site",
-    "title": "Min Portfolio",
-    "description": "Denna portfolio-sida byggd med Next.js och vanlig CSS.",
-    "longDescription": "En modern och responsiv portfolio-webbplats byggd från grunden med Next.js och vanlig CSS. Siten visar mina projekt, färdigheter och erfarenheter på ett professionellt sätt. Designen är ren och minimalistisk med fokus på användarvänlighet och prestanda.",
-    "technologies": ["Next.js", "React", "CSS", "JavaScript", "Responsive Design"],
-    "image": "/Portfolio.PNG",
-    "images": ["/Portfolio.PNG"],
-    "liveUrl": "https://dittdomän.se",
-    "repoUrl": "https://github.com/ditt-anvandarnamn/portfolio",
+    "id": "house18",
+    "title": "House 18",
+    "description": "Fullstack web application simulating a clothing store.",
+    "longDescription": "House 18 is a fullstack web application built as part of a university project during the course Full Stack Development - DA219B at Kristianstad University. The app simulates a modern clothing store with user authentication, a responsive shopping exprerience and admin product management.",
+    "technologies": ["React", "Vite", "Node.js", "Express", "MongoDB", "JWT", "CSS", "JavaScript"],
+    "image": "/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647a63716e63686a6d2f696d6167652f75706c6f61642f76313734373232333935382f393273686f74735f736f5f79626530676f2e706e67.png",
+    "images": ["/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647a63716e63686a6d2f696d6167652f75706c6f61642f76313734373232333935382f393273686f74735f736f5f79626530676f2e706e67.png"],
+    "liveUrl": "https://house-18.vercel.app/",
+    "repoUrl": "https://github.com/nickem00/house-18",
     "features": [
-      "Responsiv design",
-      "Projekt showcase",
-      "Kontaktformulär",
-      "Smooth scrolling",
-      "Modern UI/UX"
+      "User Authentication",
+      "Store (Project Showcase)",
+      "Favorite (Like) System",
+      "Cart Modal & Checkout",
+      "Admin Panel",
+      "Contact Form",
+      "Light/Dark Mode",
+      "Responsive Design",
+      "User Roles"
     ],
-    "challenges": "Att skapa en balanserad design som är både visuellt tilltalande och funktionell var en utmaning.",
-    "learnings": "Projektet lärde mig mycket om modern CSS, Next.js routing och hur man bygger professionella webbplatser."
+    "contributors": ["Hugo Nilsson", "Nicholas Malm", "Jacob Hellgren", "Pontus Havmyr"]
   },
   {
-    "id": "todo-app",
-    "title": "Todo Applikation",
-    "description": "En kraftfull todo-app med kategorier och deadlines.",
-    "longDescription": "En omfattande todo-applikation som låter användare skapa, organisera och hantera sina uppgifter effektivt. Applikationen stöder kategorier, prioritetsnivåer, deadlines och påminnelser. All data sparas lokalt i webbläsaren så att användarens uppgifter bevaras mellan sessioner.",
-    "technologies": ["React", "TypeScript", "CSS Modules", "Local Storage", "Context API"],
-    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop",
-    "images": ["https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop"],
-    "liveUrl": "https://exempel.com/todo-app",
+    "id": "solace",
+    "title": "Solace",
+    "description": "Stress and anxiety management app",
+    "longDescription": "Solace is a desktop application we developed during the Agile Development Methods course. Its purpose is to help users manage stress and anxiety by logging their mood and stress levels, which are visualized in a dashboard. The app is built with Python and Tkinter. It was a group project following agile workflows from concept to final product.",
+    "technologies": ["Python", "Tkinter", "MySQL", "Agile"],
+    "image": "/solace-logo.webp",
+    "images": ["/solace-logo.webp"],
+    "liveUrl": "",
     "repoUrl": "https://github.com/ditt-anvandarnamn/todo-app",
     "features": [
-      "Skapa och hantera uppgifter",
-      "Kategorisering av todos",
-      "Prioritetsnivåer",
-      "Deadline-hantering",
-      "Lokalt sparande",
-      "Sök och filtrera"
+      "User Authentication",
+      "Register mood and stress levels",
+      "Stress relief techniques",
+      "Summary dashboard"
     ],
-    "challenges": "Att designa en intuitiv användarupplevelse för komplex funktionalitet var utmanande, särskilt state management.",
-    "learnings": "Jag fördjupade mina kunskaper inom React hooks, TypeScript och designmönster för state management."
+    "contributors": ["Hugo Nilsson", "Nicholas Malm", "Jacob Hellgren", "Pontus Havmyr"]
   }
 ]

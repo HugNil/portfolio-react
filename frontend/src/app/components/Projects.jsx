@@ -18,11 +18,11 @@ export default function Projects() {
   };
 
   return (
-    <section className={styles.projects} id="projects">
+    <section className={`section ${styles.projects}`} id="projects">
       <div className={styles.container}>
-        <h2 className={styles.title}>Mina Projekt</h2>
+        <h2 className={styles.title}>My Projects</h2>
         <p className={styles.subtitle}>
-          Här är några av de projekt jag har arbetat med. Klicka på ett projekt för att se mer information.
+          Here are some of the projects I have worked on. Click on a project to see more information.
         </p>
         
         <div className={styles.grid}>

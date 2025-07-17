@@ -66,6 +66,15 @@ export default function ProjectModal({ project, onClose }) {
             </div>
           </div>
 
+          {project.contributors && (
+            <div className={styles.section}>
+              <h3 className={styles.sectionTitle}>Utvecklare</h3>
+              <p className={styles.contributorText}>
+                {project.contributors.join(', ')}
+              </p>
+            </div>
+          )}
+
           {project.features && (
             <div className={styles.section}>
               <h3 className={styles.sectionTitle}>Funktioner</h3>
@@ -76,20 +85,6 @@ export default function ProjectModal({ project, onClose }) {
                   </li>
                 ))}
               </ul>
-            </div>
-          )}
-
-          {project.challenges && (
-            <div className={styles.section}>
-              <h3 className={styles.sectionTitle}>Utmaningar</h3>
-              <p className={styles.text}>{project.challenges}</p>
-            </div>
-          )}
-
-          {project.learnings && (
-            <div className={styles.section}>
-              <h3 className={styles.sectionTitle}>Lärdomar</h3>
-              <p className={styles.text}>{project.learnings}</p>
             </div>
           )}
 

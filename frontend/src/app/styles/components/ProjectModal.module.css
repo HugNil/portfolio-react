@@ -55,8 +55,10 @@
 .headerImage {
   width: 100%;
   height: 400px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px 12px 0 0;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .title {
@@ -107,6 +109,13 @@
   border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+.contributorText {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .features {
