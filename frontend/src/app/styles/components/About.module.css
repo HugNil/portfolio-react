@@ -1,5 +1,3 @@
-/* src/app/components/About.module.css */
-
 .heading {
   font-size: 2.5rem;
   font-weight: 600;
@@ -39,7 +37,6 @@
   object-fit: cover;
 }
 
-/* Stora skärmar (1200px+) */
 @media (min-width: 1200px) {
   .contentContainer {
     gap: 12rem;
@@ -54,7 +51,6 @@
   }
 }
 
-/* Mellanstora skärmar (992px - 1199px) */
 @media (max-width: 1199px) {
   .contentContainer {
     gap: 6rem;
@@ -66,7 +62,6 @@
   }
 }
 
-/* Tablets (768px - 991px) */
 @media (max-width: 991px) {
   .contentContainer {
     gap: 4rem;
@@ -84,7 +79,6 @@
   }
 }
 
-/* Responsivitet för mobila enheter */
 @media (max-width: 768px) {
   .contentContainer {
     flex-direction: column-reverse;
@@ -120,7 +114,6 @@
   }
 }
 
-/* Mobiler (under 576px) */
 @media (max-width: 575px) {
   .heading {
     font-size: 1.625rem;
@@ -144,7 +137,6 @@
   }
 }
 
-/* Extra små mobiler (under 400px) */
 @media (max-width: 399px) {
   .heading {
     font-size: 1.5rem;

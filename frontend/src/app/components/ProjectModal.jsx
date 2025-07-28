@@ -55,29 +55,31 @@ export default function ProjectModal({ project, onClose }) {
             <p className={styles.description}>{project.longDescription}</p>
           </div>
 
-          <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Teknologier</h3>
-            <div className={styles.technologies}>
-              {project.technologies.map((tech, index) => (
-                <span key={index} className={styles.tech}>
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {project.contributors && (
+          {project.technologies && project.technologies.length > 0 && (
             <div className={styles.section}>
-              <h3 className={styles.sectionTitle}>Utvecklare</h3>
+              <h3 className={styles.sectionTitle}>Technologies</h3>
+              <div className={styles.technologies}>
+                {project.technologies.map((tech, index) => (
+                  <span key={index} className={styles.tech}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {project.contributors && project.contributors.length > 0 && (
+            <div className={styles.section}>
+              <h3 className={styles.sectionTitle}>Contributors</h3>
               <p className={styles.contributorText}>
                 {project.contributors.join(', ')}
               </p>
             </div>
           )}
 
-          {project.features && (
+          {project.features && project.features.length > 0 && (
             <div className={styles.section}>
-              <h3 className={styles.sectionTitle}>Funktioner</h3>
+              <h3 className={styles.sectionTitle}>Features</h3>
               <ul className={styles.features}>
                 {project.features.map((feature, index) => (
                   <li key={index} className={styles.feature}>

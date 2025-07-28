@@ -20,10 +20,7 @@ export default function Projects() {
   return (
     <section className={`section ${styles.projects}`} id="projects">
       <div className={styles.container}>
-        <h2 className={styles.title}>My Projects</h2>
-        <p className={styles.subtitle}>
-          Here are some of the projects I have worked on. Click on a project to see more information.
-        </p>
+        <h2 className={styles.title}>Projects</h2>
         
         <div className={styles.grid}>
           {projects.map((project) => (

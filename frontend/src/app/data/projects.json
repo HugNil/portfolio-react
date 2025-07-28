@@ -2,8 +2,8 @@
   {
     "id": "portfolio next.js",
     "title": "Portfolio Next.js",
-    "description": "Simple portfolio site built with Next.js",
-    "longDescription": "A simple portfolio site showcasing my projects and skills, built with Next.js. The site features a clean design, responsive layout, and easy navigation. It includes sections for my work, skills, and contact information.",
+    "description": "Portfolio site built with Next.js",
+    "longDescription": "A portfolio site showcasing my projects and skills, built with Next.js. The site features a clean design, responsive layout, and easy navigation. It includes sections for my work, skills, and contact information.",
     "technologies": ["Next.js", "React", "JavaScript", "Responsive Design", "Framer motion", "CSS Modules", "App Router"],
     "image": "/Portfolio.PNG",
     "images": ["/Portfolio.PNG"],
@@ -57,5 +57,36 @@
       "Summary dashboard"
     ],
     "contributors": ["Hugo Nilsson", "Nicholas Malm", "Jacob Hellgren", "Pontus Havmyr"]
+  },
+  {
+    "id": "userscope",
+    "title": "UserScope",
+    "description": "Assignment for Frontend course at Kristianstad University",
+    "longDescription": "This is a front end assignment in the course Front End at Kristianstad University. We learned how to fetch data from an API. There were also a lot of focus on semantic design and responsiveness.",
+    "technologies": ["Javascript", "HTML", "CSS", "API", "Responsive Design"],
+    "image": "/userscope.png",
+    "images": ["/userscope.png"],
+    "liveUrl": "https://dynamic-website-js232nk64-hugos-projects-b7299843.vercel.app/pages/posts.html",
+    "repoUrl": "https://github.com/HugNil/dynamic-website",
+    "features": [
+      "Explore posts from different users",
+      "Read comments and reactions on posts",
+      "Check out different user profiles",
+      "Contact the site admin for questions or feedback"
+    ],
+    "contributors": ["Hugo Nilsson"]
+  },
+  {
+    "id": "morecomingsoon",
+    "title": "More Coming Soon",
+    "description": "",
+    "longDescription": "No more featured projects yet. Feel free to check out my GitHub in the meantime.",
+    "technologies": [],
+    "image": "assets_task_01k193ds64e97a9242gfxx28fv_1753726149_img_0.webp",
+    "images": ["assets_task_01k193ds64e97a9242gfxx28fv_1753726149_img_0.webp"],
+    "liveUrl": "",
+    "repoUrl": "https://github.com/HugNil",
+    "features": [],
+    "contributors": []
   }
 ]
