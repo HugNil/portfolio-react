@@ -64,8 +64,8 @@
     "description": "Assignment for Frontend course at Kristianstad University",
     "longDescription": "This is a front end assignment in the course Front End at Kristianstad University. We learned how to fetch data from an API. There were also a lot of focus on semantic design and responsiveness.",
     "technologies": ["Javascript", "HTML", "CSS", "API", "Responsive Design"],
-    "image": "/userscope.png",
-    "images": ["/userscope.png"],
+    "image": "/userscope.PNG",
+    "images": ["/userscope.PNG"],
     "liveUrl": "https://dynamic-website-js232nk64-hugos-projects-b7299843.vercel.app/pages/posts.html",
     "repoUrl": "https://github.com/HugNil/dynamic-website",
     "features": [
